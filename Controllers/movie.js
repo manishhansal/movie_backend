@@ -34,9 +34,16 @@ async function updateMovie(req, res, next) {
   res.json(response);
 }
 
+async function getMovieById(req, res, next) {
+  let movieId = req.params.movieId;
+  let response = await movieModel.find({ _id: movieId });
+  res.json(response);
+}
+
 module.exports = {
   getAllMovie,
   createMovie,
   deleteMovie,
   updateMovie,
+  getMovieById,
 };

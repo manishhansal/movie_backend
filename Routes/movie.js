@@ -7,6 +7,7 @@ const movieController = require("../Controllers/movie");
 
 app.post("/movie", movieController.createMovie);
 app.get("/movie", movieController.getAllMovie);
+app.get("/movie/:movieId", movieController.getMovieById);
 app.put("/movie/:movieId", movieController.updateMovie);
 app.delete("/movie/:movieId", movieController.deleteMovie);
 
